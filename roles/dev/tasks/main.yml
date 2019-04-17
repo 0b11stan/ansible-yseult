@@ -1,0 +1,9 @@
+- name: libs packages are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - cmake
+    - qt5-base
+
+

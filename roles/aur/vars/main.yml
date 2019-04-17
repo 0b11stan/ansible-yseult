@@ -1,0 +1,4 @@
+aur_path: /opt/AUR
+aur_packages:
+- jetbrains-toolbox
+- termite-nocsd

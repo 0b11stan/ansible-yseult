@@ -1,0 +1,21 @@
+- name: routine package are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - keepassxc
+    - nextcloud-client
+    - docker
+    - docker-compose
+    - connman
+    - dmenu
+    - wpa_supplicant
+    - ttf-dejavu
+    - thunderbird
+    - thunderbird-extension-enigmail
+    - openssh
+
+- name: enable connman
+  service:
+      name: connman.service
+      enabled: true
