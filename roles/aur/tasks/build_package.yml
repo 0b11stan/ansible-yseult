@@ -1,0 +1,17 @@
+- name: "{{ package.name }} package is pulled"
+  become: true
+  become_user: aur_builder
+  git:
+    repo: "{{ package.path }}"
+    dest: "{{ aur_path }}/{{ package.name }}"
+  register: git
+
+- name: "{{ package.name }} package is installed"
+  become: yes
+  become_user: aur_builder
+  aur:
+    name: "{{ package.name }}"
+    use: makepkg
+  when: git.changed
+
+

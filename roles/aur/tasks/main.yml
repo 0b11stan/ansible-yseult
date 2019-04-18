@@ -20,24 +20,5 @@
     state: directory
     owner: aur_builder
 
-- name: aur packages are installed
-  become: yes
-  become_user: aur_builder
-  aur:
-    name: "{{ item }}"
-    use: makepkg
+- include: build_package.yml package={{ item }}
   loop: "{{ aur_packages }}"
-
-#- name: aur packages are pulled
-#  become: true
-#  become_user: aur_builder
-#  git:
-#    repo: "{{ item.path }}"
-#    dest: "{{ aur_path }}/{{ item.name }}"
-#  loop: "{{ aur_packages }}"
-#
-#- name: aur packages are built
-#  become: true
-#  become_user: aur_builder
-#  command: "chdir={{ aur_path }}/{{ item.name }} makepkg -si"
-#  loop: "{{ aur_packages }}"
