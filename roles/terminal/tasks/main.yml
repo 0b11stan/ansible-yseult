@@ -1,0 +1,12 @@
+- name: zsh configuration is copied
+  copy:
+    src: zshrc
+    dest: /home/tristan/.zshrc
+
+- name: oh-my-zsh is installed
+  become: true
+  become_user: tristan
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  args:
+    chdir: /home/tristan/
+    creates: /home/tristan/.oh-my-zsh/

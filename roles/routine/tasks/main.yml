@@ -1,3 +1,9 @@
+- name: user tristan is created
+  user:
+    name: tristan
+    groups: docker
+    shell: /bin/zsh
+
 - name: routine package are installed
   package:
     name: "{{ item }}"
@@ -14,6 +20,9 @@
     - thunderbird
     - thunderbird-extension-enigmail
     - openssh
+    - zsh
+    - zsh-theme-powerlevel9k
+    - qtcreator
 
 - name: enable connman
   service:
