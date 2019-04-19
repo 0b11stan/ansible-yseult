@@ -1,0 +1,18 @@
+- name: packages are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - connman
+    - wpa_supplicant
+
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: nordvpn-bin
+      path: https://aur.archlinux.org/nordvpn-bin.git
+
+- name: enable connman
+  service:
+      name: connman.service
+      enabled: true

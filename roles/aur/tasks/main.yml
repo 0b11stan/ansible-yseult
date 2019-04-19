@@ -16,9 +16,7 @@
 
 - name: the AUR directory is created
   file:
-    path: "{{ aur_path }}"
+    path: /opt/AUR
     state: directory
     owner: aur_builder
 
-- include: build_package.yml package={{ item }}
-  loop: "{{ aur_packages }}"

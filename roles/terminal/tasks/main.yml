@@ -1,7 +1,23 @@
-- name: zsh configuration is copied
+- name: are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - zsh
+    - zsh-theme-powerlevel9k
+
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: termite-nocsd
+      path: https://aur.archlinux.org/termite-nocsd.git
+
+- name: configuration is copied
   copy:
     src: zshrc
     dest: /home/tristan/.zshrc
+    owner: tristan
+    group: tristan
 
 - name: oh-my-zsh is installed
   become: true

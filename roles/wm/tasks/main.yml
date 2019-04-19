@@ -1,0 +1,21 @@
+- name: packages are installed
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - sway
+    - swayidle
+    - dmenu
+
+- name: configuration is copied
+  copy:
+    src: sway
+    dest: /home/tristan/.config/sway/config
+    owner: tristan
+    group: tristan
+
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: swaylock-blur-bin
+      path: https://aur.archlinux.org/swaylock-blur-bin.git

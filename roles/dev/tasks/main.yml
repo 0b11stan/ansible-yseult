@@ -1,9 +1,14 @@
-- name: libs packages are installed
+- name: packages are installed
   package:
     name: "{{ item }}"
     state: present
   loop:
     - cmake
     - qt5-base
+    - qtcreator
 
-
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: jetbrains-toolbox
+      path: https://aur.archlinux.org/jetbrains-toolbox.git

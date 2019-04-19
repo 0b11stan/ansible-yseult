@@ -3,7 +3,7 @@
   become_user: aur_builder
   git:
     repo: "{{ package.path }}"
-    dest: "{{ aur_path }}/{{ package.name }}"
+    dest: "/opt/AUR/{{ package.name }}"
   register: git
 
 - name: "{{ package.name }} package is installed"

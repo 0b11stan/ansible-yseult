@@ -1,8 +1,0 @@
-aur_path: /opt/AUR
-aur_packages:
-- name: jetbrains-toolbox
-  path: https://aur.archlinux.org/jetbrains-toolbox.git
-- name: termite-nocsd
-  path: https://aur.archlinux.org/termite-nocsd.git
-- name: nordvpn-bin
-  path: https://aur.archlinux.org/nordvpn-bin.git

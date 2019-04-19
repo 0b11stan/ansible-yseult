@@ -13,18 +13,9 @@
     - nextcloud-client
     - docker
     - docker-compose
-    - connman
-    - dmenu
-    - wpa_supplicant
     - ttf-dejavu
     - thunderbird
     - thunderbird-extension-enigmail
     - openssh
-    - zsh
-    - zsh-theme-powerlevel9k
-    - qtcreator
+    - grim
 
-- name: enable connman
-  service:
-      name: connman.service
-      enabled: true

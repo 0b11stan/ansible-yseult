@@ -3,7 +3,8 @@
   connection: local
   gather_facts: no
   roles:
-    - routine
+    - wm
     - aur
-    - dev
+    - routine
     - terminal
+    - dev
