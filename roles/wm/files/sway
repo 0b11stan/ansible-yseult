@@ -45,6 +45,9 @@
 ### LOOK
 
     default_border none
+    gaps outer 5
+    gaps inner 20
+    smart_gaps on
 
 
 ### COMMON SHORTCUTS

@@ -12,12 +12,15 @@
     - name: termite-nocsd
       path: https://aur.archlinux.org/termite-nocsd.git
 
-- name: configuration is copied
+- name: configuration files are copied
   copy:
-    src: zshrc
-    dest: /home/tristan/.zshrc
+    src: "{{ item.filename }}"
+    dest: "{{ item.dest }}"
     owner: tristan
     group: tristan
+  loop:
+    - { filename: zshrc, dest: /home/tristan/.zshrc }
+    - { filename: termite, dest: /home/tristan/.config/termite/config }
 
 - name: oh-my-zsh is installed
   become: true
