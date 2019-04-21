@@ -9,6 +9,7 @@
     name: "{{ item }}"
     state: present
   loop:
+    - alsa-utils
     - keepassxc
     - nextcloud-client
     - docker
