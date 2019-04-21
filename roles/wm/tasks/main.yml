@@ -6,13 +6,25 @@
     - sway
     - swayidle
     - dmenu
+    - waybar
+    - otf-font-awesome
 
-- name: configuration is copied
-  copy:
-    src: sway
-    dest: /home/tristan/.config/sway/config
+- name: waybar directory exist
+  file:
+    path: /home/tristan/.config/waybar
+    state: directory
     owner: tristan
     group: tristan
+
+- name: configuration files are copied
+  copy:
+    src: "{{ item.name }}"
+    dest: "/home/tristan/.config/{{ item.dest }}"
+    owner: tristan
+    group: tristan
+  loop:
+    - { name: sway, dest: sway/config }
+    - { name: waybar.css, dest: waybar/style.css }
 
 - name: aur packages are installed
   include: build_package.yml package={{ item }}
