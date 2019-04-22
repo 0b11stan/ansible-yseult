@@ -1,0 +1,17 @@
+- name: vim awesome is pulled and up to date
+  git:
+    repo: https://github.com/amix/vimrc.git
+    dest: /home/tristan/.vim_runtime
+    depth: 1
+
+- name: personal configuration file is copied
+  copy:
+    src: vimrc
+    dest: /home/tristan/.vim_runtime/my_configs.vim
+    owner: tristan
+    group: tristan
+
+- name: enhanced c++ syntax highlight is installed
+  git:
+    repo: https://github.com/bfrg/vim-cpp-modern.git
+    dest: /home/tristan/.vim_runtime/my_plugins/vim-cpp-modern
