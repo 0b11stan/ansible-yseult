@@ -12,7 +12,19 @@
     - name: nordvpn-bin
       path: https://aur.archlinux.org/nordvpn-bin.git
 
-- name: enable connman
+- name: enable net services
   service:
-      name: connman.service
-      enabled: true
+    name: "{{ item }}"
+    enabled: true
+  loop:
+    - connman.service
+    - nordvpnsd.service
+
+- name: enable user scoped nordvpn service
+  become: true
+  become_user: tristan
+  systemd:
+    name: nordvpnud.service
+    enabled: true
+    state: started
+    scope: user

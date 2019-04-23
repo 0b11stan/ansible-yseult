@@ -11,5 +11,5 @@ noremap <C-l> <C-w>k
 noremap <C-k> <C-w>j
 noremap <C-j> <C-w>h
 
-map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
+map <C-C> :pyf /usr/share/clang/clang-format.py<cr>
+imap <C-C> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
