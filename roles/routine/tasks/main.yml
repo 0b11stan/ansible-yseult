@@ -10,6 +10,8 @@
     state: present
   loop:
     - alsa-utils
+    - pulseaudio
+    - pulseaudio-alsa
     - keepassxc
     - nextcloud-client
     - docker
