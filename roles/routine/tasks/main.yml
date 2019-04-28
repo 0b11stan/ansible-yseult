@@ -23,4 +23,6 @@
     - grim
     - screenfetch
     - feh
+    - qemu-headless
+    - libvirt
 
