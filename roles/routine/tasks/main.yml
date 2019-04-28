@@ -25,4 +25,5 @@
     - feh
     - qemu-headless
     - libvirt
+    - virt-install
 
