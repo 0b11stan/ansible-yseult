@@ -15,5 +15,8 @@
   become: true
   become_user: tristan
   git:
-    repo: https://github.com/bfrg/vim-cpp-modern.git
-    dest: /home/tristan/.vim_runtime/my_plugins/vim-cpp-modern
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { repo: "https://github.com/bfrg/vim-cpp-modern.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-cpp-modern" }
+    - { repo: "https://github.com/rhysd/vim-clang-format.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-clang-format" }
