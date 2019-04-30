@@ -23,8 +23,10 @@
     - grim
     - screenfetch
     - feh
-    - qemu-headless
-    - libvirt
-    - virt-install
-    - virt-viewer
+    - virtualbox-host-modules-arch
+    - sshpass
+      #- qemu-headless
+      #- libvirt
+      #- virt-install
+      #- virt-viewer
 
