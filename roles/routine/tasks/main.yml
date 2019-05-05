@@ -25,6 +25,7 @@
     - feh
     - virtualbox-host-modules-arch
     - sshpass
+    - ranger
       #- qemu-headless
       #- libvirt
       #- virt-install
