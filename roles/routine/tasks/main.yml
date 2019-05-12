@@ -4,6 +4,13 @@
     groups: docker
     shell: /bin/zsh
 
+- name: directory for vms is created
+  file:
+    path: /var/virtualbox-vms
+    state: directory
+    owner: tristan
+    group: tristan
+
 - name: routine package are installed
   package:
     name: "{{ item }}"
