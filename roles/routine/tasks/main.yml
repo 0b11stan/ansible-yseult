@@ -33,8 +33,14 @@
     - virtualbox-host-modules-arch
     - sshpass
     - ranger
+    - exfat-utils
       #- qemu-headless
       #- libvirt
       #- virt-install
       #- virt-viewer
 
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: brave-bin
+      path: https://aur.archlinux.org/brave-bin.git
