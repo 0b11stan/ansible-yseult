@@ -44,3 +44,5 @@
   loop:
     - name: brave-bin
       path: https://aur.archlinux.org/brave-bin.git
+    - name: discord
+      path: https://aur.archlinux.org/discord.git
