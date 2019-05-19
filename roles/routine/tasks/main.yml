@@ -34,6 +34,8 @@
     - sshpass
     - ranger
     - exfat-utils
+    - unzip
+    - detox
       #- qemu-headless
       #- libvirt
       #- virt-install
@@ -46,3 +48,5 @@
       path: https://aur.archlinux.org/brave-bin.git
     - name: discord
       path: https://aur.archlinux.org/discord.git
+
+# TODO : update la conf ssh pour strict host key
