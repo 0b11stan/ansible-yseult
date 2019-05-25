@@ -4,6 +4,11 @@
     dest: /home/tristan/.vim_runtime
     depth: 1
 
+- name: required packages are installed
+  package:
+    name: autopep8
+    state: present
+
 - name: personal configuration file is copied
   copy:
     src: vimrc
@@ -20,3 +25,4 @@
   loop:
     - { repo: "https://github.com/bfrg/vim-cpp-modern.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-cpp-modern" }
     - { repo: "https://github.com/rhysd/vim-clang-format.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-clang-format" }
+    - { repo: "https://github.com/tell-k/vim-autopep8.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-autopep8" }
