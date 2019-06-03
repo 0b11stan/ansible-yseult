@@ -36,6 +36,7 @@
     - exfat-utils
     - unzip
     - detox
+    - profanity
       #- qemu-headless
       #- libvirt
       #- virt-install
