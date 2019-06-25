@@ -49,5 +49,7 @@
       path: https://aur.archlinux.org/brave-bin.git
     - name: discord
       path: https://aur.archlinux.org/discord.git
+    - name: minecraft
+      path: https://aur.archlinux.org/minecraft-launcher.git
 
 # TODO : update la conf ssh pour strict host key
