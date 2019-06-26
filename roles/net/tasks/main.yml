@@ -5,6 +5,7 @@
   loop:
     - connman
     - wpa_supplicant
+    - openvpn
 
 - name: aur packages are installed
   include: build_package.yml package={{ item }}
