@@ -1,11 +1,13 @@
 - name: required packages are installed
   become: true
   package:
+    use: apt
+    name: "{{item}}"
     state: present
-    name:
-      - curl
-      - zsh
-      - zsh-theme-powerlevel9k
+  loop:
+    - curl
+    - zsh
+    - zsh-theme-powerlevel9k
 
 - name: oh-my-zsh is installed
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -14,7 +16,7 @@
     creates: /home/tristan/.oh-my-zsh/
 
 - name: configuration file is copied
-  copy:
+  template:
     src: zshrc
     dest: /home/tristan/.zshrc
     owner: tristan
