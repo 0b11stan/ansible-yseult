@@ -1,0 +1,21 @@
+- name: required packages are installed
+  become: true
+  package:
+    state: present
+    name:
+      - curl
+      - zsh
+      - zsh-theme-powerlevel9k
+
+- name: oh-my-zsh is installed
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  args:
+    chdir: /home/tristan/
+    creates: /home/tristan/.oh-my-zsh/
+
+- name: configuration file is copied
+  copy:
+    src: zshrc
+    dest: /home/tristan/.zshrc
+    owner: tristan
+    group: tristan
