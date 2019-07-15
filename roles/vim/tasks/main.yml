@@ -1,13 +1,11 @@
+- name: distrib specific packages are installed
+  include: "{{ DISTRIB }}.yml"
+
 - name: vim awesome is pulled and up to date
   git:
     repo: https://github.com/amix/vimrc.git
     dest: /home/tristan/.vim_runtime
     depth: 1
-
-- name: required packages are installed
-  package:
-    name: autopep8
-    state: present
 
 - name: personal configuration file is copied
   copy:
