@@ -1,56 +1,41 @@
+- name: routine package are installed
+  become: true
+  package:
+    state: present
+    name:
+      - curl
+      - tree
+      - keepassxc
+      - docker
+      - docker-compose
+      - thunderbird
+      - feh
+      - sshpass
+      - ranger
+      - exfat-utils
+      - unzip
+      - detox
+      - profanity
+      - pandoc
+
+- name: distrib specific packages are installed
+  include: "{{ DISTRIB }}.yml"
+
 - name: user tristan is created
+  become: true
   user:
     name: tristan
-    groups: docker
+    groups:
+      - docker
+      - sudo
     shell: /bin/zsh
 
 - name: directory for vms is created
+  become: true
   file:
     path: /var/virtualbox-vms
     state: directory
     owner: tristan
     group: tristan
-
-- name: routine package are installed
-  package:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - alsa-utils
-    - pulseaudio
-    - pulseaudio-alsa
-    - keepassxc
-    - nextcloud-client
-    - docker
-    - docker-compose
-    - ttf-dejavu
-    - thunderbird
-    - thunderbird-extension-enigmail
-    - openssh
-    - grim
-    - screenfetch
-    - feh
-    - virtualbox-host-modules-arch
-    - sshpass
-    - ranger
-    - exfat-utils
-    - unzip
-    - detox
-    - profanity
-    - pandoc
-      #- qemu-headless
-      #- libvirt
-      #- virt-install
-      #- virt-viewer
-
-- name: aur packages are installed
-  include: build_package.yml package={{ item }}
-  loop:
-    - name: brave-bin
-      path: https://aur.archlinux.org/brave-bin.git
-    - name: discord
-      path: https://aur.archlinux.org/discord.git
-    - name: minecraft
-      path: https://aur.archlinux.org/minecraft-launcher.git
 
 # TODO : update la conf ssh pour strict host key

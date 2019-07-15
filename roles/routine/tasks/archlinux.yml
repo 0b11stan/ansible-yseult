@@ -1,0 +1,27 @@
+- name: required packages are installed
+  become: true
+  package:
+    state: present
+    name:
+      - alsa-utils
+      - pulseaudio
+      - pulseaudio-alsa
+      - openssh
+      - ttf-dejavu
+      - grim
+      - screenfetch
+      - virtualbox-host-modules-arch
+      - thunderbird-extension-enigmail
+      - nextcloud-client
+
+- name: aur packages are installed
+  include: build_package.yml package={{ item }}
+  loop:
+    - name: brave-bin
+      path: https://aur.archlinux.org/brave-bin.git
+    - name: discord
+      path: https://aur.archlinux.org/discord.git
+    - name: minecraft
+      path: https://aur.archlinux.org/minecraft-launcher.git
+
+
