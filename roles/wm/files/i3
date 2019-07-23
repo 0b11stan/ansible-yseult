@@ -175,3 +175,4 @@ bar {
 default_border pixel 3
 
 exec --no-startup-id xrandr --output DP-1-1 --rotate left
+exec --no-startup-id feh --bg-fill /home/tristan/Pictures/wallpapers/morpheus.jpg
