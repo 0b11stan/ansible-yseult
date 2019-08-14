@@ -10,6 +10,7 @@
       - i3lock
       - i3status
       - arandr
+      - compton
 
 - name: pictures directory exists
   file:
