@@ -25,3 +25,5 @@
     - { repo: "https://github.com/rhysd/vim-clang-format.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-clang-format" }
     - { repo: "https://github.com/tell-k/vim-autopep8.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-autopep8" }
     - { repo: "https://github.com/posva/vim-vue.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-vuejs" }
+    - { repo: "https://github.com/hashivim/vim-terraform.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-terraform" }
+    - { repo: "https://github.com/andreshazard/vim-freemarker.git", dest: "/home/tristan/.vim_runtime/my_plugins/vim-freemarker" }
