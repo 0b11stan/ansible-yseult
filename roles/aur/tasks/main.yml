@@ -1,13 +1,16 @@
 - name: a specific user is present to build aur packages
-  user: name=aur_builder
+  become: true
+  user:
+    name: aur_builder
+    create_home: false
 
 - name: the aur_builder specific user as suffisent rights
+  become: true
   lineinfile:
-     path: /etc/sudoers.d/aur_builder-allow-to-sudo-pacman
-     state: present
-     line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
-     validate: /usr/sbin/visudo -cf %s
-     create: yes
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
 
 - name: ansible-aur plugin is installed
   git:

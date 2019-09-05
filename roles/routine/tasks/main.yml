@@ -27,7 +27,7 @@
     name: tristan
     groups:
       - docker
-      - sudo
+      - wheel
     shell: /bin/zsh
 
 - name: directory for vms is created
