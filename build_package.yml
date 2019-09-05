@@ -1,17 +1,21 @@
-- name: "{{ package.name }} package is pulled"
+- name: ansible aur module is installed
+  git:
+    repo: https://github.com/kewlfft/ansible-aur.git 
+    dest: /home/tristan/.ansible/plugins/modules/aur
+
+- name: "{{ item.name }} package is pulled"
   become: true
   become_user: aur_builder
   git:
-    repo: "{{ package.path }}"
-    dest: "/opt/AUR/{{ package.name }}"
+    repo: "{{ item.path }}"
+    dest: "/opt/AUR/{{ item.name }}"
   register: git
 
-- name: "{{ package.name }} package is installed"
-  become: true
+- name: "{{ item.name }} package is installed"
   become_user: aur_builder
+  become: true
   aur:
-    name: "{{ package.name }}"
+    name: "{{ item.name }}"
     use: makepkg
   when: git.changed
-
 

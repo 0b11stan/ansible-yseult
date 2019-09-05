@@ -1,5 +1,5 @@
 - name: distrib specific packages are installed
-  include: "{{ DISTRIB }}.yml"
+  include_tasks: "{{ DISTRIB }}.yml"
 
 - name: vim awesome is pulled and up to date
   git:

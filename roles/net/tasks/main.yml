@@ -8,7 +8,7 @@
     - openvpn
 
 - name: aur packages are installed
-  include: build_package.yml package={{ item }}
+  include_tasks: build_package.yml
   loop:
     - name: nordvpn-bin
       path: https://aur.archlinux.org/nordvpn-bin.git

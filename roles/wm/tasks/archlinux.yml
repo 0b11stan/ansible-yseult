@@ -27,7 +27,7 @@
     - { name: waybar.css, dest: waybar/style.css }
 
 - name: aur packages are installed
-  include: build_package.yml package={{ item }}
+  include_tasks: build_package.yml
   loop:
     - name: swaylock-blur-bin
       path: https://aur.archlinux.org/swaylock-blur-bin.git

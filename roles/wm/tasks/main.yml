@@ -1,2 +1,2 @@
 - name: include distribution specific tasks
-  include: "{{ DISTRIB }}.yml"
+  include_tasks: "{{ DISTRIB }}.yml"

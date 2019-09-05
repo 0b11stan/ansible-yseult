@@ -19,7 +19,7 @@
       - pandoc
 
 - name: distrib specific packages are installed
-  include: "{{ DISTRIB }}.yml"
+  include_tasks: "{{ DISTRIB }}.yml"
 
 - name: user tristan is created
   become: true
