@@ -1,0 +1,25 @@
+- name: required packages are installed
+  become: true
+  package:
+    name: weechat
+    state: present
+
+- name: install python matrix nio
+  pip:
+    name: "matrix-nio[e2e]"
+
+- name: required aur packages are installed
+  include_tasks: file=build_package.yml
+  loop:
+    - name: python2-peewee
+      path: https://aur.archlinux.org/python2-peewee.git 
+    - name: libolm
+      path: https://aur.archlinux.org/libolm.git
+    - name: python-olm
+      path: https://aur.archlinux.org/python-olm.git
+
+- name: weechat plugin for matrix is istalled
+  include_tasks: file=build_package.yml
+  loop:
+    - name: weechat-poljar-matrix-git
+      path: https://aur.archlinux.org/weechat-poljar-matrix-git.git
