@@ -10,4 +10,5 @@
     - terminal
     - dev
     - vim
-    - chat
+      #- shell
+#- chat
