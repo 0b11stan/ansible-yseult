@@ -1,7 +1,12 @@
-- name: the cyberlab directory is created
+- name: the lab file structure is created
   file:
     state: directory
-    path: /home/tristan/SECLAB
+    path: "{{ item }}"
+  loop:
+    - /home/tristan/SECLAB
+    - /home/tristan/SECLAB/dictionaries
+    - /home/tristan/SECLAB/ctfs
+    - /home/tristan/SECLAB/ctfs/hacker101
 
 - name: packages dependencies are satisfied
   package:
@@ -17,7 +22,7 @@
 - name: dictionaries are pulled
   get_url:
     url: "https://raw.githubusercontent.com/dustyfresh/dictionaries/master/DirBuster-Lists/{{ item }}"
-    dest: "/home/tristan/SECLAB/{{ item }}"
+    dest: /home/tristan/SECLAB/dictionaries/
   loop:
     - apache-user-enum-1.0.txt
     - apache-user-enum-2.0.txt
