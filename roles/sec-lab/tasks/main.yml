@@ -1,0 +1,30 @@
+- name: the cyberlab directory is created
+  file:
+    state: directory
+    path: /home/tristan/SECLAB
+
+- name: packages dependencies are satisfied
+  package:
+      name: git go dep
+      state: present
+
+- name: aur packages are installed
+  include_tasks: build_package.yml
+  loop:
+    - name: dirstalk
+      path: https://aur.archlinux.org/dirstalk-git.git
+
+- name: dictionaries are pulled
+  get_url:
+    url: "https://raw.githubusercontent.com/dustyfresh/dictionaries/master/DirBuster-Lists/{{ item }}"
+    dest: "/home/tristan/SECLAB/{{ item }}"
+  loop:
+    - apache-user-enum-1.0.txt
+    - apache-user-enum-2.0.txt
+    - directory-list-1.0.txt
+    - directory-list-2.3-big.txt
+    - directory-list-2.3-medium.txt
+    - directory-list-2.3-small.txt
+    - directory-list-lowercase-2.3-big.txt
+    - directory-list-lowercase-2.3-medium.txt
+    - directory-list-lowercase-2.3-small.txt
