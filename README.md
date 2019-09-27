@@ -29,7 +29,6 @@ Logical Volumes Management:
 $ ansible-playbook -K yseult.yml
 ```
 Available distributions :
-- debian
 - archlinux
 
 ## Post-install
