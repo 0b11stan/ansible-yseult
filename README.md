@@ -4,10 +4,26 @@
 Personnal ansible configuration for my arch linux computer.
 Using [ansible-aur-git](https://github.com/kewlfft/ansible-aur) for aur packages.
 
+## Partitionning
+
+For BIOS (fdis output):
+```
+Device     Start      End   Sectors  Size Type
+/dev/sda1     34     2047      2014 1007K BIOS boot
+/dev/sda2   2048   718847    716800  350M EFI System
+/dev/sda3 718848 10000000 991544435  500G Linux LVM
+```
+
+Logical Volumes Management:
+* vg-main/root
+* vg-main/home
+* vg-main/var
+* vg-main/swap
+
 ## Installation
 
 ```
-$ ansible-playbook -e "DISTRIB=<distribution_name>" -K yseult.yml
+$ ansible-playbook -K yseult.yml
 ```
 Available distributions :
 - debian

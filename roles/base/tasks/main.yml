@@ -1,0 +1,61 @@
+- name: set timezone
+  file:
+    path: /usr/share/zoneinfo/Europe/Paris
+    dest: /etc/localtime
+    state: link
+    force: yes
+
+- name: hardware time settings are generated
+  command: hwclock --systohc
+  args:
+    creates: /etc/adjtime
+
+- name: locales are set
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: "^#fr_FR.UTF-8 UTF-8"
+    line: "fr_FR.UTF-8 UTF-8"
+
+- name: locales are generated
+  command: locale-gen
+  args:
+    creates: /usr/lib/locale/locale-archive
+
+- name: locales are persisted
+  lineinfile:
+    path: /etc/locale.conf
+    create: true
+    line: "LANG=fr_FR.UTF-8 UTF-8"
+
+- name: keymap is persisted
+  lineinfile:
+    path: /etc/vconsole.conf
+    create: true
+    line: "KEYMAP=fr-latin1"
+
+- name: hostname is set
+  lineinfile:
+    path: /etc/hostname
+    create: true
+    line: "yseult"
+
+- name: static hosts configuration is copied
+  copy:
+    src: hosts
+    dest: /etc/hosts
+
+- name: mkinitcpio configuration is set
+  lineinfile:
+    path: /etc/mkinitcpio.conf
+    regexp: "^HOOKS="
+    line: "HOOKS=(base udev autodetect modconf block lvm2 filesystems keyboard fsck)"
+
+- name: boot loader and microcodes are installed
+  package:
+    name: grub efibootmgr intel-ucode
+
+# https://wiki.archlinux.org/index.php/GRUB#Intel_BIOS_not_booting_GPT
+# TODO : !!!! grub-install --target=i386-pc /dev/sda
+#
+# TODO : grub-mkconfig -o /boot/grub/grub.cfg
+# TODO : mkinitcpio -p linux
