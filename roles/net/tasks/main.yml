@@ -3,9 +3,9 @@
     name: "{{ item }}"
     state: present
   loop:
-    - connman
     - wpa_supplicant
-    - openvpn
+    - iw
+    - connman
 
 - name: aur packages are installed
   include_tasks: build_package.yml
@@ -13,7 +13,7 @@
     - name: nordvpn-bin
       path: https://aur.archlinux.org/nordvpn-bin.git
 
-- name: enable net services
+- name: enable network services
   service:
     name: "{{ item }}"
     enabled: true

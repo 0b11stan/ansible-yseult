@@ -1,10 +1,13 @@
 # ansible-yseult
 
-
 Personnal ansible configuration for my arch linux computer.
 Using [ansible-aur-git](https://github.com/kewlfft/ansible-aur) for aur packages.
 
-## Partitionning
+## Installation
+
+Follow [archlinux official installation guide](https://wiki.archlinux.org/index.php/Installation_guide).
+
+### Create your partitions
 
 For BIOS (fdis output):
 ```
@@ -20,7 +23,7 @@ Logical Volumes Management:
 * vg-main/var
 * vg-main/swap
 
-## Installation
+### Play the recipe
 
 ```
 $ ansible-playbook -K yseult.yml

@@ -6,9 +6,9 @@
     - base
     - vim
     - wm
+    - net
     - shell
     - routine
     - terminal
     - dev
     - aur
-    - net
