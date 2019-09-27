@@ -1,8 +1,0 @@
-- name: required packages are installed
-  become: true
-  package:
-    state: present
-    name:
-      - openssh-client
-      - enigmail
-      - nextcloud-desktop

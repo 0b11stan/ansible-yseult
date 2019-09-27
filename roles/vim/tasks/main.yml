@@ -1,5 +1,7 @@
-- name: distrib specific packages are installed
-  include_tasks: "{{ DISTRIB }}.yml"
+- name: required packages are installed
+  package:
+    name: autopep8
+    state: present
 
 - name: vim awesome is pulled and up to date
   git:
