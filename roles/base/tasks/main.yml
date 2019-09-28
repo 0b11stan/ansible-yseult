@@ -13,7 +13,7 @@
 - name: locales are set
   lineinfile:
     path: /etc/locale.gen
-    regexp: "^#fr_FR.UTF-8 UTF-8"
+    regexp: "^#?fr_FR.UTF-8 UTF-8"
     line: "fr_FR.UTF-8 UTF-8"
 
 - name: locales are generated
@@ -47,7 +47,7 @@
 - name: mkinitcpio configuration is set
   lineinfile:
     path: /etc/mkinitcpio.conf
-    regexp: "^HOOKS="
+    regexp: "^HOOKS=.*"
     line: "HOOKS=(base udev autodetect modconf block lvm2 filesystems keyboard fsck)"
 
 - name: boot loader and microcodes are installed
