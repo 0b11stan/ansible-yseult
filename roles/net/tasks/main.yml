@@ -15,6 +15,5 @@
 
 - name: enable network services
   service:
-    name: "{{ item }}"
+    name: connman.service
     enabled: true
-  loop: connman.service
