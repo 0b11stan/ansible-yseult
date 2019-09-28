@@ -7,6 +7,8 @@
   file:
     path: /home/tristan/.vimrc
     state: touch
+    owner: tristan
+    group: tristan
 
 - name: vim awesome is pulled and up to date
   become: true
