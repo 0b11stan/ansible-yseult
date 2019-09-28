@@ -9,6 +9,8 @@
     state: touch
 
 - name: vim awesome is pulled and up to date
+  become: true
+  become_user: tristan
   git:
     repo: https://github.com/amix/vimrc.git
     dest: /home/tristan/.vim_runtime
