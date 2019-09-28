@@ -41,7 +41,7 @@
 
 - name: termite config dir exists
   file:
-    path: /home/tristan/.config/termite"
+    path: /home/tristan/.config/termite
     state: directory
     owner: tristan
     group: tristan
