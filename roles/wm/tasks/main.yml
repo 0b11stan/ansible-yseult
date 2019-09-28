@@ -9,12 +9,15 @@
     - waybar
     - otf-font-awesome
 
-- name: waybar directory exist
+- name: config directories exists
   file:
-    path: /home/tristan/.config/waybar
+    path: "/home/tristan/.config/{{ item }}"
     state: directory
     owner: tristan
     group: tristan
+  loop:
+    - waybar
+    - sway
 
 - name: configuration files are copied
   copy:
