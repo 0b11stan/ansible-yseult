@@ -17,15 +17,4 @@
   service:
     name: "{{ item }}"
     enabled: true
-  loop:
-    - connman.service
-    - nordvpnsd.service
-
-- name: enable user scoped nordvpn service
-  become: true
-  become_user: tristan
-  systemd:
-    name: nordvpnud.service
-    enabled: true
-    state: started
-    scope: user
+  loop: connman.service
