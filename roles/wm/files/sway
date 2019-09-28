@@ -12,13 +12,13 @@
 ### OUTPUT CONFIGURATION
 
     # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    output * bg /home/tristan/Pictures/wallpapers/btw.png fill
+    output * bg /home/tristan/pictures/wallpapers/morpheus.jpg fill
 
     # configure HiDPI (for 4k screen)
-    output eDP-1 scale 2 pos 0 0
+    #output eDP-1 scale 2 pos 0 0
 
     # configure HDMI output
-    output HDMI-A-2 resolution 1440x900
+    #output HDMI-A-2 resolution 1440x900
 
 
 ### IDLE CONFIGURATION
@@ -72,7 +72,7 @@
     bindsym $mod+Shift+c reload
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Closing session ?' -b 'YAY' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Closing session ?' -b 'bye' 'swaymsg exit'
 
     # lock the screen
     bindsym $mod+Shift+x exec swaylock-blur --blur-sigma=40

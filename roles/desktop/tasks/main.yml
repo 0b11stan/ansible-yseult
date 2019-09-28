@@ -1,13 +1,16 @@
-- name: routine package are installed
+- name: desktop package are installed
   become: true
   package:
     state: present
     name:
       - curl
       - tree
-      - keepassxc
+      - alsa-utils
+      - pulseaudio
+      - pulseaudio-alsa
       - docker
       - docker-compose
+      - keepassxc
       - thunderbird
       - feh
       - sshpass
@@ -15,43 +18,33 @@
       - exfat-utils
       - unzip
       - detox
-      - profanity
       - pandoc
-
-- name: required packages are installed
-  become: true
-  package:
-    state: present
-    name:
-      - alsa-utils
-      - pulseaudio
-      - pulseaudio-alsa
-      - openssh
       - ttf-dejavu
       - grim
       - screenfetch
       - virtualbox-host-modules-arch
       - thunderbird-extension-enigmail
       - nextcloud-client
+      - cmake
+      - qt5-base
+      - qtcreator
 
 - name: aur packages are installed
   include_tasks: build_package.yml
   loop:
     - name: brave-bin
       path: https://aur.archlinux.org/brave-bin.git
-    - name: discord
-      path: https://aur.archlinux.org/discord.git
     - name: minecraft
       path: https://aur.archlinux.org/minecraft-launcher.git
+    - name: termite-nocsd
+      path: https://aur.archlinux.org/termite-nocsd.git
 
-- name: user tristan is created
-  become: true
-  user:
-    name: tristan
-    groups:
-      - docker
-      - wheel
-    shell: /bin/zsh
+- name: termite configuration files are copied
+  copy:
+    src: termite
+    dest: /home/tristan/.config/termite/config
+    owner: tristan
+    group: tristan
 
 - name: directory for vms is created
   become: true
@@ -61,4 +54,3 @@
     owner: tristan
     group: tristan
 
-# TODO : update la conf ssh pour strict host key

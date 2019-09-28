@@ -1,0 +1,24 @@
+- name: install required packages
+  become: true
+  package:
+    state: present
+    name:
+      - sudo
+      - openssh
+
+- name: user tristan is created
+  become: true
+  user:
+    name: tristan
+    groups: docker
+    shell: /bin/zsh
+
+- name: I am administrator
+  become: true
+  lineinfile:
+    path: /etc/sudoers.d/10-tristan
+    line: 'tristan ALL=(ALL) ALL'
+    create: yes
+    validate: 'visudo -cf %s'
+
+# TODO : update la conf ssh pour strict host key

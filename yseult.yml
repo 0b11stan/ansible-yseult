@@ -4,11 +4,10 @@
   gather_facts: no
   roles:
     - base
+    - common
+    - aur
     - vim
     - wm
+    - desktop
     - net
     - shell
-    - routine
-    - terminal
-    - dev
-    - aur

@@ -98,6 +98,4 @@ source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
-{% if DISTRIB == "archlinux" %}
-    if [ "$(tty)" = "/dev/tty1" ]; then exec sway; fi
-{% endif %}
+if [ "$(tty)" = "/dev/tty1" ]; then exec sway; fi

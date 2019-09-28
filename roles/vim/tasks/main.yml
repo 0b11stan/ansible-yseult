@@ -9,6 +9,18 @@
     dest: /home/tristan/.vim_runtime
     depth: 1
 
+- name: check if vimawesome has been installed
+  lineinfile:
+    name: /home/tristan/.vimrc
+    line: "set runtimepath+=~/.vim_runtime"
+    state: present
+  check_mode: yes
+  register: vimrc
+
+- name: vim awesome is installed
+  command: /home/tristan/.vim_runtime/install_awesome_vimrc.sh
+  when: vimrc is changed
+
 - name: personal configuration file is copied
   copy:
     src: vimrc

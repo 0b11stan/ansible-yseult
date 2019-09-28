@@ -1,8 +1,3 @@
-- name: ansible aur module is installed
-  git:
-    repo: https://github.com/kewlfft/ansible-aur.git 
-    dest: /home/tristan/.ansible/plugins/modules/aur
-
 - name: "{{ item.name }} package is pulled"
   become: true
   become_user: aur_builder

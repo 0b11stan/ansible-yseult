@@ -54,8 +54,6 @@
   package:
     name: grub efibootmgr intel-ucode
 
-# https://wiki.archlinux.org/index.php/GRUB#Intel_BIOS_not_booting_GPT
-# TODO : !!!! grub-install --target=i386-pc /dev/sda
-#
-# TODO : grub-mkconfig -o /boot/grub/grub.cfg
-# TODO : mkinitcpio -p linux
+- name: base network tool is installed
+  package:
+    name: connman 

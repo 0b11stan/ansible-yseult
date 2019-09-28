@@ -31,3 +31,17 @@
   loop:
     - name: swaylock-blur-bin
       path: https://aur.archlinux.org/swaylock-blur-bin.git
+
+- name: wallpaper directory exists
+  file:
+    path: /home/tristan/pictures/wallpapers
+    state: directory
+    owner: tristan
+    group: tristan
+
+- name: wallpapers are copies
+  copy:
+    src: wallpapers/*
+    dest: /home/tristan/pictures/wallpapers
+    owner: tristan
+    group: tristan
