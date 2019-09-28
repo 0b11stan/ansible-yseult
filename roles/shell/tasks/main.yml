@@ -9,6 +9,8 @@
     - zsh-theme-powerlevel9k
 
 - name: oh-my-zsh is installed
+  become: true
+  become_user: tristan
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   args:
     chdir: /home/tristan/
