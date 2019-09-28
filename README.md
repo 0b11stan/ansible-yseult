@@ -42,6 +42,8 @@ $ ansible-playbook -K yseult.yml
 
 * Changer le chemin par defaut d'installation des machines virtualbox à /var/virtualbox-vms
 * Ajouter les clef GPG et SSH au système de fichier
+* Changer mdp tristan
+* Changer mdp root
 
 ## TODO :
 

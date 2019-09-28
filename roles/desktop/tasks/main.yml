@@ -39,6 +39,13 @@
     - name: termite-nocsd
       path: https://aur.archlinux.org/termite-nocsd.git
 
+- name: termite config dir exists
+  file:
+    path: /home/tristan/.config/termite"
+    state: directory
+    owner: tristan
+    group: tristan
+
 - name: termite configuration files are copied
   copy:
     src: termite
