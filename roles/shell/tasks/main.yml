@@ -1,7 +1,6 @@
 - name: required packages are installed
   become: true
   package:
-    use: apt
     name: "{{item}}"
     state: present
   loop:
