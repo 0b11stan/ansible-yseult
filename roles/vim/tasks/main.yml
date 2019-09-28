@@ -3,13 +3,6 @@
     name: autopep8
     state: present
 
-- name: vimrc file exists
-  file:
-    path: /home/tristan/.vimrc
-    state: touch
-    owner: tristan
-    group: tristan
-
 - name: vim awesome is pulled and up to date
   become: true
   become_user: tristan
@@ -18,19 +11,25 @@
     dest: /home/tristan/.vim_runtime
     depth: 1
 
+- name: vimrc file exists
+  stat:
+    path: /home/tristan/.vimrc
+  register: vimrc_file
+
 - name: check if vimawesome has been installed
   lineinfile:
     name: /home/tristan/.vimrc
     line: "set runtimepath+=~/.vim_runtime"
     state: present
   check_mode: yes
-  register: vimrc
+  register: vimrc_line
+  when: vimrc_file.stat.exists == True
 
 - name: vim awesome is installed
   become: true
   become_user: tristan
   command: sh /home/tristan/.vim_runtime/install_awesome_vimrc.sh
-  when: vimrc is changed
+  when: (vimrc_line is defined) and (vimrc_line is changed)
 
 - name: personal configuration file is copied
   copy:
