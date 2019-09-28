@@ -27,7 +27,7 @@
 - name: vim awesome is installed
   become: true
   become_user: tristan
-  command: /home/tristan/.vim_runtime/install_awesome_vimrc.sh
+  command: sh /home/tristan/.vim_runtime/install_awesome_vimrc.sh
   when: vimrc is changed
 
 - name: personal configuration file is copied
