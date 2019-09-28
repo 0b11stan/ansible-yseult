@@ -6,6 +6,11 @@
       - sudo
       - openssh
 
+- name: required groups exists
+  group:
+    name: docker
+    state: present
+
 - name: user tristan is created
   become: true
   user:

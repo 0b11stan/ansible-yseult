@@ -3,6 +3,11 @@
     name: autopep8
     state: present
 
+- name: vimrc file exists
+  file:
+    path: /home/tristan/.vimrc
+    state: touch
+
 - name: vim awesome is pulled and up to date
   git:
     repo: https://github.com/amix/vimrc.git
