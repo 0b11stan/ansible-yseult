@@ -38,6 +38,6 @@
 - name: wallpapers are copied
   copy:
     src: wallpapers/
-    dest: /home/tristan/pictures/wallpapers/
+    dest: /home/tristan/Pictures/wallpapers/
     owner: tristan
     group: tristan
