@@ -1,11 +1,10 @@
 - name: packages are installed
   package:
-    name: "{{ item }}"
     state: present
-  loop:
-    - wpa_supplicant
-    - iw
-    - connman
+    name:
+      - wpa_supplicant
+      - iw
+      - connman
 
 - name: aur packages are installed
   include_tasks: build_package.yml

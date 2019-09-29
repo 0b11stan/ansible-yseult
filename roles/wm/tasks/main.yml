@@ -1,13 +1,12 @@
 - name: packages are installed
   package:
-    name: "{{ item }}"
     state: present
-  loop:
-    - sway
-    - swayidle
-    - dmenu
-    - waybar
-    - otf-font-awesome
+    name: 
+      - sway
+      - swayidle
+      - dmenu
+      - waybar
+      - otf-font-awesome
 
 - name: config directories exists
   file:

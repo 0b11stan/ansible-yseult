@@ -1,11 +1,10 @@
 - name: required packages are installed
   become: true
   package:
-    name: "{{item}}"
     state: present
-  loop:
-    - curl
-    - zsh
+    name:
+      - curl
+      - zsh
 
 - name: oh-my-zsh is installed
   become: true
