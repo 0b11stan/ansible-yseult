@@ -28,6 +28,7 @@
       - cmake
       - qt5-base
       - qtcreator
+      - gimp
 
 - name: aur packages are installed
   include_tasks: build_package.yml
