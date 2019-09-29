@@ -22,7 +22,7 @@ Logical Volumes:
 * vg-main/var
 * vg-main/swap
 
-### Play the recipe
+### Play the recipe
 
 Install required packages:
 * git
@@ -40,10 +40,15 @@ $ ansible-playbook -K yseult.yml
 
 ## Post-install
 
-* Changer le chemin par defaut d'installation des machines virtualbox à /var/virtualbox-vms
 * Ajouter les clef GPG et SSH au système de fichier
 * Changer mdp tristan
 * Changer mdp root
+* Configurer firefox
+    - extension: vixen (+config)
+    - extension: duckduckgo
+    - theme: dark
+* Synchroniser Nextcloud sur /home/tristan/Cloud
+* Changer le chemin par defaut d'installation des machines virtualbox à /var/virtualbox-vms
 
 ## TODO :
 
