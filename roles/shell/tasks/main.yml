@@ -6,7 +6,6 @@
   loop:
     - curl
     - zsh
-    - zsh-theme-powerlevel9k
 
 - name: oh-my-zsh is installed
   become: true
@@ -22,3 +21,10 @@
     dest: /home/tristan/.zshrc
     owner: tristan
     group: tristan
+
+- name: powerlevel9k theme is installed
+  become_user: tristan
+  become: true
+  git:
+    repo: https://github.com/bhilburn/powerlevel9k.git
+    dest: /home/tristan/.oh-my-zsh/custom/themes/powerlevel9k
