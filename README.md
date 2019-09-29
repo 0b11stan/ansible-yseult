@@ -48,6 +48,7 @@ $ ansible-playbook -K yseult.yml
     - extension: duckduckgo
     - theme: dark
 * Synchroniser Nextcloud sur /home/tristan/Cloud
+* Synchroniser Thunderbird
 * Changer le chemin par defaut d'installation des machines virtualbox à /var/virtualbox-vms
 
 ## TODO :
