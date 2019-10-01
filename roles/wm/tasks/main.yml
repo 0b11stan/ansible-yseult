@@ -4,6 +4,7 @@
     name: 
       - sway
       - swayidle
+      - swaylock
       - dmenu
       - waybar
       - otf-font-awesome
