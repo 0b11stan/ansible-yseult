@@ -33,8 +33,6 @@
 - name: aur packages are installed
   include_tasks: build_package.yml
   loop:
-    - name: brave-bin
-      path: https://aur.archlinux.org/brave-bin.git
     - name: minecraft
       path: https://aur.archlinux.org/minecraft-launcher.git
     - name: termite-nocsd

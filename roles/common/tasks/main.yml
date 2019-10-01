@@ -3,6 +3,7 @@
   package:
     state: present
     name:
+      - cpupower
       - base-devel
       - sudo
       - openssh
