@@ -29,6 +29,7 @@
       - qt5-base
       - qtcreator
       - gimp
+      - evince
 
 - name: aur packages are installed
   include_tasks: build_package.yml

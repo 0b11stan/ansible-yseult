@@ -12,8 +12,9 @@
 
 ### OUTPUT CONFIGURATION
 
-    # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    output * bg /home/tristan/Pictures/wallpapers/morpheus.jpg fill
+    # wallpaper
+    #output * bg /home/tristan/Pictures/wallpapers/morpheus.jpg fill
+    output * bg /home/tristan/Pictures/wallpapers/evil_corp.png fill
 
     # configure HiDPI (for 4k screen)
     #output eDP-1 scale 2 pos 0 0
