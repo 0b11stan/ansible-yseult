@@ -61,3 +61,15 @@
     owner: tristan
     group: tristan
 
+- name: asciidoctor required packages
+  become: true
+  package:
+    state: absent
+    name: asciidoctor
+
+- name: install asciidoctor-pdf
+  gem:
+    name: asciidoctor-pdf
+    state: present
+    pre_release: true
+
