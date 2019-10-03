@@ -73,3 +73,12 @@
     state: present
     pre_release: true
 
+- name: install extentions gems
+  gem:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - rouge
+    - pygments.rb
+    - coderay
+
