@@ -81,4 +81,5 @@
     - rouge
     - pygments.rb
     - coderay
+    - asciidoctor-diagram
 
