@@ -8,8 +8,6 @@
       - alsa-utils
       - pulseaudio
       - pulseaudio-alsa
-      - docker
-      - docker-compose
       - keepassxc
       - thunderbird
       - feh
@@ -22,6 +20,7 @@
       - ttf-dejavu
       - grim
       - screenfetch
+      - virtualbox
       - virtualbox-host-modules-arch
       - thunderbird-extension-enigmail
       - nextcloud-client
