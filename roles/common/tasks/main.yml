@@ -17,13 +17,6 @@
     groups: docker
     shell: /bin/zsh
 
-- name: docker is enabled
-  become: true
-  systemd:
-    name: docker
-    enabled: true
-    state: stopped
-
 - name: I am administrator
   become: true
   lineinfile:
