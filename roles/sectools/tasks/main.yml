@@ -1,0 +1,7 @@
+- name: aur packages are installed
+  include_tasks: build_package.yml
+  loop:
+    - name: dirbuster
+      path: https://aur.archlinux.org/dirbuster.git
+    - name: sqlmap-git
+      path: https://aur.archlinux.org/sqlmap-git.git
