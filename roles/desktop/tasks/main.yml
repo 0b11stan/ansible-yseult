@@ -29,6 +29,8 @@
       - qtcreator
       - gimp
       - evince
+      - julia
+      - jre8-openjdk
 
 - name: aur packages are installed
   include_tasks: build_package.yml
