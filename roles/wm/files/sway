@@ -17,10 +17,10 @@
     output * bg /home/tristan/Pictures/wallpapers/evil_corp.png fill
 
     # configure HiDPI (for 4k screen)
-    #output eDP-1 scale 2 pos 0 0
+    output eDP-1 pos 0 0
 
     # configure HDMI output
-    #output HDMI-A-2 resolution 1440x900
+    output HDMI-A-2 resolution 1440x900
 
 
 ### IDLE CONFIGURATION
