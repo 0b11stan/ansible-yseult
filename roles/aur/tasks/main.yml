@@ -2,7 +2,8 @@
   become: true
   user:
     name: aur_builder
-    create_home: false
+    create_home: true
+    home: /opt/AUR
 
 - name: the aur_builder specific user as suffisent rights
   become: true
@@ -16,10 +17,3 @@
   git:
     repo: https://github.com/kewlfft/ansible-aur.git
     dest: ~/.ansible/plugins/modules/aur
-
-- name: the AUR directory is created
-  file:
-    path: /opt/AUR
-    state: directory
-    owner: aur_builder
-
