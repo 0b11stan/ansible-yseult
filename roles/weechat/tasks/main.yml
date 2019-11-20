@@ -30,6 +30,12 @@
     dest: /opt/BUILD/weechat-matrix
   register: git
 
+- name: old virtualenv is removed
+  file:
+    path: /home/tristan/.weechat/python/venv/
+    state: absent
+  when: git is changed
+
 - name: virtualenv are installed and up to date
   become: true
   become_user: tristan
