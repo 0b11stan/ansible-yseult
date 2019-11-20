@@ -37,8 +37,6 @@
       path: https://aur.archlinux.org/minecraft-launcher.git
     - name: termite-nocsd
       path: https://aur.archlinux.org/termite-nocsd.git
-    - name: joplin
-      path: https://aur.archlinux.org/joplin.git
 
 - name: termite config dir exists
   file:

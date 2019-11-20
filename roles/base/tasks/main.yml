@@ -52,9 +52,12 @@
     line: "HOOKS=(base udev autodetect modconf block lvm2 filesystems keyboard fsck)"
 
 - name: boot loader and microcodes are installed
+  become: true
   package:
-    name: grub efibootmgr intel-ucode
+    state: present
+    name:
+      - grub
+      - efibootmgr
+      - intel-ucode
 
-- name: base network tool is installed
-  package:
-    name: connman 
+
