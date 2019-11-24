@@ -7,6 +7,7 @@
     - common
     - aur
     - vim
+    - neovim
     - wm
     - desktop
     - net
