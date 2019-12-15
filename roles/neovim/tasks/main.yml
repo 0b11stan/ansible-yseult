@@ -17,3 +17,8 @@
   copy:
     src: init.vim
     dest: /home/tristan/.config/nvim/init.vim
+
+- name: pip packages are installed
+  pip:
+    name: pynvim
+    extra_args: --user

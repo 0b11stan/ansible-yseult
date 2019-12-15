@@ -12,5 +12,12 @@ noremap <C-j> <C-w>h
 
 " Plugins installation with vim-plug
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+  Plug 'sheerun/vim-polyglot'
+	Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+
+call deoplete#enable()
+
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
