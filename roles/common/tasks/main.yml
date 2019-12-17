@@ -14,7 +14,9 @@
   become: true
   user:
     name: tristan
-    groups: docker
+    groups:
+      - docker
+      - wireshark
     shell: /bin/zsh
 
 - name: I am administrator

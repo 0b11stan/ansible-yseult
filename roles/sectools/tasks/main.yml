@@ -1,3 +1,6 @@
+- name: required packages are installed
+  package: name=wireshark-qt
+
 - name: aur packages are installed
   include_tasks: build_package.yml
   loop:
