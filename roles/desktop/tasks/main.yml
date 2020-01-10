@@ -39,6 +39,8 @@
       path: https://aur.archlinux.org/minecraft-launcher.git
     - name: termite-nocsd
       path: https://aur.archlinux.org/termite-nocsd.git
+    - name: wf-recorder-git
+      path: https://aur.archlinux.org/wf-recorder-git.git
 
 - name: termite config dir exists
   file:
