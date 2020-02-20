@@ -94,10 +94,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias backlog="vim -O Cloud/backlog/lti.yml -O Cloud/backlog/sti.yml -O Cloud/backlog/services.yml"
 alias setperformance="sudo cpupower frequency-set -g performance"
 alias setpowersave="sudo cpupower frequency-set -g powersave"
- 
+alias hma="sudo /usr/local/bin/hma-vpn.sh"
+alias backup="\
+    rsync -av --delete /home/tristan/Documents/ /mnt/disk/home-backup/Documents; \
+    rsync -av --delete /home/tristan/Pictures/ /mnt/disk/home-backup/Pictures; \
+    rsync -av --delete /home/tristan/Videos/ /mnt/disk/home-backup/Videos"
+  
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 

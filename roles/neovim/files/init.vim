@@ -1,4 +1,7 @@
 set number
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 noremap m l
 noremap l k
@@ -14,7 +17,10 @@ noremap <C-j> <C-w>h
 call plug#begin(stdpath('data') . '/plugged')
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
   Plug 'sheerun/vim-polyglot'
-	Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'vim-scripts/vim-autopep8', { 'on': 'Autopep8' }
+  Plug 'rhysd/vim-clang-format',
+  Plug 'zchee/deoplete-clang'
 call plug#end()
 
 call deoplete#enable()

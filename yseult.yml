@@ -6,7 +6,6 @@
     - base
     - common
     - aur
-    - vim
     - neovim
     - wm
     - desktop
@@ -14,3 +13,4 @@
     - shell
     - weechat
     - sectools
+    #- vim

@@ -41,6 +41,8 @@
       path: https://aur.archlinux.org/termite-nocsd.git
     - name: wf-recorder-git
       path: https://aur.archlinux.org/wf-recorder-git.git
+    - name: ganttproject
+      path: https://aur.archlinux.org/ganttproject.git
 
 - name: termite config dir exists
   file:
@@ -81,8 +83,8 @@
     name: "{{ item }}"
     state: present
   loop:
-    - rouge
-    - pygments.rb
-    - coderay
+    #- rouge
+    #- pygments.rb
+    #- coderay
     - asciidoctor-diagram
 
