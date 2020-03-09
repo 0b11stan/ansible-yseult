@@ -105,6 +105,8 @@ alias backup="\
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
+BROWSER=/usr/bin/qutebrowser
+
 PATH=$PATH:/home/tristan/.gem/ruby/2.6.0/bin
 
 if [ "$(tty)" = "/dev/tty1" ]; then exec sway; fi
