@@ -43,6 +43,8 @@
       path: https://aur.archlinux.org/wf-recorder-git.git
     - name: ganttproject
       path: https://aur.archlinux.org/ganttproject.git
+    - name: gomuks-git
+      path: https://aur.archlinux.org/gomuks-git.git
 
 - name: termite config dir exists
   file:
@@ -87,4 +89,3 @@
     #- pygments.rb
     #- coderay
     - asciidoctor-diagram
-
