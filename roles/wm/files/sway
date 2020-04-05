@@ -20,6 +20,7 @@
     output eDP-1 pos 0 0
 
     # configure HDMI output
+    output HDMI-A-1 scale 2
     output HDMI-A-2 resolution 1440x900
 
 

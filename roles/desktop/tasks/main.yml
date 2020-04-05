@@ -45,6 +45,10 @@
       path: https://aur.archlinux.org/ganttproject.git
     - name: gomuks-git
       path: https://aur.archlinux.org/gomuks-git.git
+    - name: teams
+      path: https://aur.archlinux.org/teams.git
+    - name: slack-desktop
+      path: https://aur.archlinux.org/slack-desktop.git
 
 - name: termite config dir exists
   file:
