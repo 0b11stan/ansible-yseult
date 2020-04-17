@@ -21,6 +21,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'vim-scripts/vim-autopep8', { 'on': 'Autopep8' }
   Plug 'rhysd/vim-clang-format',
   Plug 'zchee/deoplete-clang'
+  Plug 'junegunn/goyo.vim'
 call plug#end()
 
 call deoplete#enable()

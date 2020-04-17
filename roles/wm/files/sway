@@ -44,6 +44,9 @@
        natural_scroll enabled
     }
 
+    # configure razer
+    input 5426:55:Razer_Razer_DeathAdder_2013 pointer_accel -0.5
+
 
 ### LOOK
 

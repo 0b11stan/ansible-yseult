@@ -108,6 +108,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 
 BROWSER=/usr/bin/qutebrowser
 
-PATH=$PATH:/home/tristan/.gem/ruby/2.6.0/bin
+PATH=$PATH:/home/tristan/.gem/ruby/2.7.0/bin
 
 if [ "$(tty)" = "/dev/tty1" ]; then exec sway; fi

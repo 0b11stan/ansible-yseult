@@ -47,6 +47,8 @@
       path: https://aur.archlinux.org/gomuks-git.git
     - name: teams
       path: https://aur.archlinux.org/teams.git
+    - name: google-chrome
+      path: https://aur.archlinux.org/google-chrome.git
 
 - name: termite config dir exists
   file:
