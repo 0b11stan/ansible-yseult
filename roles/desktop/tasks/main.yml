@@ -11,7 +11,6 @@
       - keepassxc
       - feh
       - sshpass
-      - ranger
       - exfat-utils
       - unzip
       - detox
@@ -21,13 +20,10 @@
       - screenfetch
       - virtualbox
       - virtualbox-host-modules-arch
-      - nextcloud-client
       - cmake
       - qt5-base
-      - qtcreator
       - gimp
       - evince
-      - julia
       - jre8-openjdk
       - obs-studio
       - vlc
@@ -47,8 +43,8 @@
       path: https://aur.archlinux.org/gomuks-git.git
     - name: teams
       path: https://aur.archlinux.org/teams.git
-    - name: google-chrome
-      path: https://aur.archlinux.org/google-chrome.git
+    - name: pal
+      path: https://aur.archlinux.org/pal.git
 
 - name: termite config dir exists
   file:
