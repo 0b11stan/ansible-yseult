@@ -45,12 +45,12 @@
       path: https://aur.archlinux.org/pal.git
     - name: android-sdk
       path: https://aur.archlinux.org/android-sdk.git
-    - name: android-sdk-build-tools
-      path: https://aur.archlinux.org/android-sdk-build-tools.git
-    - name: android-platform
-      path: https://aur.archlinux.org/android-platform.git
     - name: android-sdk-platform-tools
       path: https://aur.archlinux.org/android-sdk-platform-tools.git
+    - name: android-sdk-build-tools-28.0.3
+      path: https://aur.archlinux.org/android-sdk-build-tools-28.0.3.git
+    - name: android-platform-28
+      path: https://aur.archlinux.org/android-platform-28.git
     - name: flutter
       path: https://aur.archlinux.org/flutter.git
 
