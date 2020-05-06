@@ -1,3 +1,4 @@
+---
 - name: set timezone
   file:
     path: /usr/share/zoneinfo/Europe/Paris
@@ -59,5 +60,4 @@
       - grub
       - efibootmgr
       - intel-ucode
-
-
+...

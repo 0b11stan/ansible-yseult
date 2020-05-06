@@ -37,14 +37,22 @@
       path: https://aur.archlinux.org/termite-nocsd.git
     - name: wf-recorder-git
       path: https://aur.archlinux.org/wf-recorder-git.git
-    - name: ganttproject
-      path: https://aur.archlinux.org/ganttproject.git
     - name: gomuks-git
       path: https://aur.archlinux.org/gomuks-git.git
     - name: teams
       path: https://aur.archlinux.org/teams.git
     - name: pal
       path: https://aur.archlinux.org/pal.git
+    - name: android-sdk
+      path: https://aur.archlinux.org/android-sdk.git
+    - name: android-sdk-build-tools
+      path: https://aur.archlinux.org/android-sdk-build-tools.git
+    - name: android-platform
+      path: https://aur.archlinux.org/android-platform.git
+    - name: android-sdk-platform-tools
+      path: https://aur.archlinux.org/android-sdk-platform-tools.git
+    - name: flutter
+      path: https://aur.archlinux.org/flutter.git
 
 - name: termite config dir exists
   file:
