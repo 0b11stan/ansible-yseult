@@ -25,6 +25,7 @@
       - gimp
       - evince
       - jre8-openjdk
+      - jdk8-openjdk
       - obs-studio
       - vlc
 
