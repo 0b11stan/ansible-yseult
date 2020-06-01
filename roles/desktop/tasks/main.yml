@@ -54,6 +54,8 @@
       path: https://aur.archlinux.org/android-platform-28.git
     - name: flutter
       path: https://aur.archlinux.org/flutter.git
+    - name: drawio-desktop-bin
+      path: https://aur.archlinux.org/drawio-desktop-bin.git
 
 - name: termite config dir exists
   file:
