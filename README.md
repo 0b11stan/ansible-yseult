@@ -7,7 +7,7 @@ Using [ansible-aur-git](https://github.com/kewlfft/ansible-aur) for aur packages
 
 Follow [archlinux official installation guide](https://wiki.archlinux.org/index.php/Installation_guide).
 
-**Warning :** install connman before reboot
+**Warning :** install networkmanager before reboot
 
 ### Create your partitions
 

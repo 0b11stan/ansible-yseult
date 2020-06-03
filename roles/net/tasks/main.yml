@@ -1,12 +1,14 @@
 - name: packages are installed
+  become: true
   package:
     state: present
     name:
       - wpa_supplicant
       - iw
-      - connman
+      - networkmanager
 
 - name: enable network services
+  become: true
   service:
-    name: connman.service
+    name: NetworkManager.service
     enabled: true

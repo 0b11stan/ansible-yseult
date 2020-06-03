@@ -15,15 +15,16 @@
     creates: /home/tristan/.oh-my-zsh/
 
 - name: configuration file is copied
-  template:
+  copy:
     src: zshrc
     dest: /home/tristan/.zshrc
     owner: tristan
     group: tristan
 
-- name: powerlevel9k theme is installed
+- name: powerlevel10k theme is installed
   become_user: tristan
   become: true
   git:
-    repo: https://github.com/bhilburn/powerlevel9k.git
-    dest: /home/tristan/.oh-my-zsh/custom/themes/powerlevel9k
+    depth: 1
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: /home/tristan/.oh-my-zsh/custom/themes/powerlevel10k
