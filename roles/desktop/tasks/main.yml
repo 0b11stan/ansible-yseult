@@ -71,6 +71,15 @@
     owner: tristan
     group: tristan
 
+- name: add the shrinkpdf tool
+  become: true
+  copy:
+    src: shrinkpdf.sh
+    dest: /usr/local/bin/shrinkpdf
+    owner: tristan
+    group: tristan
+    mode: 0100
+
 - name: directory for vms is created
   become: true
   file:
