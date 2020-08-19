@@ -14,7 +14,10 @@
 
     # wallpaper
     #output * bg /home/tristan/Pictures/wallpapers/morpheus.jpg fill
-    output * bg /home/tristan/Pictures/wallpapers/evil_corp.png fill
+    #output * bg /home/tristan/Pictures/wallpapers/evil_corp.png fill
+    #output * bg /home/tristan/Pictures/wallpapers/tux.jpg fill
+    output * bg /home/tristan/Pictures/wallpapers/gnu-hd.jpg fill
+    #output * bg /home/tristan/Pictures/wallpapers/freedom.png fill
 
     # configure HiDPI (for 4k screen)
     output eDP-1 pos 0 0
@@ -32,6 +35,11 @@
 
 
 ### INPUT CONFIGURATION
+    
+    # configure klim keyboard
+    input 9610:1:SINO_WEALTH_USB_KEYBOARD {
+        xkb_layout fr
+    }
 
     # configure keyboard layout
     input 1:1:AT_Translated_Set_2_keyboard {

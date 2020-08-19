@@ -1,7 +1,14 @@
 set number
-set expandtab
-set tabstop=4
-set shiftwidth=4
+"set foldmethod=indent
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set colorcolumn=81
+set cursorline
+
+hi CursorLine   cterm=NONE ctermbg=238
+hi CursorColumn cterm=NONE ctermbg=238
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 noremap m l
 noremap l k
@@ -22,9 +29,12 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'rhysd/vim-clang-format',
   Plug 'zchee/deoplete-clang'
   Plug 'junegunn/goyo.vim'
+	Plug 'alvan/vim-closetag'
 call plug#end()
 
 call deoplete#enable()
 
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+let NERDTreeWinSize=21
