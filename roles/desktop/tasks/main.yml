@@ -6,9 +6,10 @@
       - curl
       - tree
       - alsa-utils
+      - termite
       - pulseaudio
       - pulseaudio-alsa
-      - keepassxc
+      - ranger
       - feh
       - sshpass
       - exfat-utils
@@ -18,14 +19,9 @@
       - ttf-dejavu
       - grim
       - screenfetch
-      - virtualbox
-      - virtualbox-host-modules-arch
-      - cmake
-      - qt5-base
+      - qutebrowser
       - gimp
       - evince
-      - jre8-openjdk
-      - jdk8-openjdk
       - obs-studio
       - vlc
 
@@ -34,16 +30,12 @@
   loop:
     - name: minecraft
       path: https://aur.archlinux.org/minecraft-launcher.git
-    - name: termite-nocsd
-      path: https://aur.archlinux.org/termite-nocsd.git
     - name: wf-recorder-git
       path: https://aur.archlinux.org/wf-recorder-git.git
     - name: gomuks-git
       path: https://aur.archlinux.org/gomuks-git.git
     - name: teams
       path: https://aur.archlinux.org/teams.git
-    - name: pal
-      path: https://aur.archlinux.org/pal.git
     - name: android-sdk
       path: https://aur.archlinux.org/android-sdk.git
     - name: android-sdk-platform-tools
@@ -79,33 +71,3 @@
     owner: tristan
     group: tristan
     mode: 0100
-
-- name: directory for vms is created
-  become: true
-  file:
-    path: /var/virtualbox-vms
-    state: directory
-    owner: tristan
-    group: tristan
-
-- name: asciidoctor required packages
-  become: true
-  package:
-    state: absent
-    name: asciidoctor
-
-- name: install asciidoctor-pdf
-  gem:
-    name: asciidoctor-pdf
-    state: present
-    pre_release: true
-
-- name: install extentions gems
-  gem:
-    name: "{{ item }}"
-    state: present
-  loop:
-    #- rouge
-    #- pygments.rb
-    #- coderay
-    - asciidoctor-diagram
