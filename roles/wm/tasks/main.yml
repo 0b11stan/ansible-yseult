@@ -5,7 +5,7 @@
       - sway
       - swayidle
       - swaylock
-      - dmenu
+      - bemenu-wlroots
       - waybar
       - otf-font-awesome
 
@@ -38,6 +38,6 @@
 - name: wallpapers are copied
   copy:
     src: wallpapers/
-    dest: /home/tristan/Pictures/wallpapers/
+    dest: /home/tristan/Documents/wallpapers/
     owner: tristan
     group: tristan
