@@ -48,6 +48,8 @@
       path: https://aur.archlinux.org/flutter.git
     - name: drawio-desktop-bin
       path: https://aur.archlinux.org/drawio-desktop-bin.git
+    - name: element-desktop-git
+      path: https://aur.archlinux.org/element-desktop-git.git
 
 - name: termite config dir exists
   file:
