@@ -53,6 +53,4 @@ $ ansible-playbook -K yseult.yml
 
 ## TODO :
 
-- [ ] Copier les templates des machines virtualbox dans /var/virtualbox
-- [ ] Configurer Virtualbox par defaut avec fichiers de config
 - [ ] Ajouter le contenu de /etc/issue

@@ -17,7 +17,6 @@
     groups:
       - docker
       - wireshark
-      - flutterusers
     shell: /bin/zsh
 
 - name: I am administrator

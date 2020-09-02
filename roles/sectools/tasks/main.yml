@@ -1,4 +1,5 @@
 - name: required packages are installed
+  become: true
   package: name=wireshark-qt
 
 - name: aur packages are installed

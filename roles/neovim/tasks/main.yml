@@ -1,7 +1,8 @@
 - name: neovim is installed
   package:
-    name: neovim
-    state: present
+    name:
+      - neovim
+      - python-pynvim
 
 - name: aur packages are installed
   include_tasks: build_package.yml
@@ -13,8 +14,3 @@
   copy:
     src: init.vim
     dest: /home/tristan/.config/nvim/init.vim
-
-- name: pip packages are installed
-  pip:
-    name: pynvim
-    extra_args: --user

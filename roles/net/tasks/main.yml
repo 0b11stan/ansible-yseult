@@ -6,6 +6,7 @@
       - wpa_supplicant
       - iw
       - networkmanager
+      - gnu-netcat
 
 - name: enable network services
   become: true

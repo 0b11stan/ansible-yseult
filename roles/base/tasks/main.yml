@@ -12,6 +12,7 @@
     creates: /etc/adjtime
 
 - name: locales are set
+  become: true
   lineinfile:
     path: /etc/locale.gen
     regexp: "^#?fr_FR.UTF-8 UTF-8"
@@ -35,6 +36,7 @@
     line: "KEYMAP=fr-latin1"
 
 - name: hostname is set
+  become: true
   lineinfile:
     path: /etc/hostname
     create: true
