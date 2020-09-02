@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -113,7 +114,9 @@ alias meteo="curl http://wttr.in/Bordeaux"
 alias temperature="curl http://v2.wttr.in/Bordeaux"
 alias lf="find . -not -path '*/\.*' -type f"
 alias cmdend="aplay ~/Desktop/cmdend.wav"
-   
+alias cleopatra="curl -s http://ethicloud.fr/07f1158b-4b81-40e9-bd62-090656ac34e5 | grep 6d7d6a01-bb95-4fd8-ba26-f6dd7c2248f1 | grep -v favicon"
+alias cleowc="cleopatra | wc -l"
+    
 export ANDROID_HOME=/opt/android-sdk/
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
