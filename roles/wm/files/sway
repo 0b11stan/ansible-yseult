@@ -13,7 +13,7 @@
 ### OUTPUT CONFIGURATION
 
     # wallpaper
-    output * bg /home/tristan/Documents/wallpapers/ratm.png fill
+    output * bg /home/tristan/Documents/wallpapers/do_you_c.png fill
 
     # configure HiDPI (for 4k screen)
     output eDP-1 pos 0 0

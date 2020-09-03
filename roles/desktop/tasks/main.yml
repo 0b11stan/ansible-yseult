@@ -7,8 +7,6 @@
       - tree
       - alsa-utils
       - termite
-      - pulseaudio
-      - pulseaudio-alsa
       - ranger
       - feh
       - sshpass
@@ -24,6 +22,7 @@
       - evince
       - obs-studio
       - vlc
+      - signal-desktop
 
 - name: aur packages are installed
   include_tasks: build_package.yml
