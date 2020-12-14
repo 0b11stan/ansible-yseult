@@ -1,3 +1,10 @@
+# ARCHIVED
+
+This is old and I do not use ansible anymore to update my configuration but
+prefere a simple set of scripts you can find in my dotfiles repository. However
+I keep it because there are some tricks and ansible hacks that may be useful for
+targeting archlinux with ansible.
+
 # ansible-yseult
 
 Personnal ansible configuration for my arch linux computer.
